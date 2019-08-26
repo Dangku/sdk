@@ -31,6 +31,17 @@ static void con_net_status_changed_event(u8 status )
 							 ip4_addr3(&tmpethif->ip_addr.addr),ip4_addr4(&tmpethif->ip_addr.addr));
 #endif
 		}
+		case NETIF_WIFI_SOFTAP_SUCCESS:
+			printf("NETIF_WIFI_SOFTAP_SUCCESS\n");
+			break;
+		case NETIF_WIFI_SOFTAP_FAILED:
+			printf("NETIF_WIFI_SOFTAP_FAILED\n");
+			break;
+		case NETIF_WIFI_SOFTAP_CLOSED:
+			printf("NETIF_WIFI_SOFTAP_CLOSED\n");
+			break;
+		case NETIF_IP_NET2_UP:
+			printf("NETIF_IP_NET2_UP\n");
 			break;
         default:
             printf("UNKONWN STATE:%d\n", status);
